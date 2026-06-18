@@ -27,11 +27,9 @@ export default function Link() {
                 <p>{`http://localhost:5173/p/${code}`}</p>
 
                 <button className="copy-button">
-                    {clicked ? (
-                        <FaRegCopy onClick={handleCopy} className="copy-icon"/>
-                    ) : (
-                        <FaCheck onClick={handleCopy} className="copy-icon"/>
-                    )}
+
+                    <FaRegCopy onClick={handleCopy} className="copy-icon"/>
+
                     
                 </button>
             </div>
