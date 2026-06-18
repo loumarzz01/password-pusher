@@ -14,7 +14,7 @@ export default function Link() {
     const { code } = useParams(); 
 
     const handleCopy = () => {
-        navigator.clipboard .writeText(`https://passwordpusher.vercel.app/p/${code}`)
+        navigator.clipboard.writeText(`https://passwordpusher.vercel.app/p/${code}`)
     }
 
     return (
