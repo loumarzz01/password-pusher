@@ -15,6 +15,8 @@ export default function Link() {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(`https://passwordpusher.vercel.app/p/${code}`)
+
+        setClicked(true)
     }
 
     return (
@@ -26,11 +28,12 @@ export default function Link() {
             <div className="link-container">
                 <p>{`https://passwordpusher.vercel.app/p/${code}`}</p>
 
-                <button className="copy-button">
-
-                    <FaRegCopy onClick={handleCopy} className="copy-icon"/>
-
-                    
+                <button className="copy-button" onClick={handleCopy}>
+                    {clicked ? (
+                        <FaCheck className="copy-icon" />
+                    ) : (
+                        <FaRegCopy className="copy-icon" />
+                    )}
                 </button>
             </div>
         </div>
